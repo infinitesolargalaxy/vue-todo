@@ -53,4 +53,12 @@ div {
   -moz-osx-font-smoothing: grayscale;
   color: black;
 }
+
+body {
+  margin: 0;
+}
+
+.todo-list {
+  margin: 20px;
+}
 </style>

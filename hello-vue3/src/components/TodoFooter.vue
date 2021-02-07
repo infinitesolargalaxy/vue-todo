@@ -32,14 +32,20 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .footer-wrapper {
+    /* Center */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     background: darkgrey;
+    /* 2px right, 2px top, 2px wide */
+    box-shadow: 2px -2px 2px darkgrey;
 
     width: 100%;
     height: 40px;
+
+    /* Stick to the bottom */
     position: fixed;
     bottom: 0;
 }
