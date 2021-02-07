@@ -1,16 +1,38 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div>
+        <div class="todo-list">
+          <todo-item
+            v-for="(item, index) in todoList" :key="index"
+            :name="item.name"
+            :checked="item.checked"
+          >
+          </todo-item>
+        </div>
+    </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TodoItem from './components/TodoItem.vue'
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+    name: 'App',
+    components: {
+        TodoItem
+    },
+    data() {
+        return {
+            todoList: [
+              {
+                name: "Finish TODO",
+                checked: false,
+              },
+              {
+                name: "PEN ROULETTE",
+                checked: true,
+              },
+            ]
+        };
+    },
 }
 </script>
 
