@@ -8,16 +8,20 @@
           >
           </todo-item>
         </div>
+        <todo-footer>
+        </todo-footer>
     </div>
 </template>
 
 <script>
-import TodoItem from './components/TodoItem.vue'
+import TodoItem from './components/TodoItem.vue';
+import TodoFooter from './components/TodoFooter.vue';
 
 export default {
     name: 'App',
     components: {
-        TodoItem
+        TodoItem,
+        TodoFooter,
     },
     data() {
         return {
@@ -27,22 +31,26 @@ export default {
                 checked: false,
               },
               {
+                name: "Add Vuex to allow creation of new TODO",
+                checked: false,
+              },
+              {
                 name: "PEN ROULETTE",
                 checked: true,
               },
-            ]
+            ],
         };
     },
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+/* Global styles */
+div {
+  font-family: 'Karla', sans-serif;
+  font-size: 13px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: black;
 }
 </style>
